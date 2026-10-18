@@ -2,7 +2,7 @@
 name: User Story
 about: Skapa en ny User Story för en funktion i projektet
 title: "US-XX: <Titel>"
-labels: "user story"
+labels: "user-story"
 assignees: ""
 ---
 
