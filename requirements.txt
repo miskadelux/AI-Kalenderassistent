@@ -1,0 +1,6 @@
+Flask
+PyMySQL
+python-dotenv
+ollama
+APScheduler
+openpyxl
