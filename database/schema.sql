@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS events (
     end_time TIME NOT NULL,
     -- status: ENUM används här eftersom fältet bara tillåter ett fast antal fördefinierade värden ('aktiv' eller 'avbokad'). 
     -- Standardvärdet sätts till 'aktiv'.
-    status ENUM('aktiv', 'avbokad') DEFAULT 'aktiv',
+    status status ENUM('slutförd', 'ej slutförd') DEFAULT 'ej slutförd' NOT NULL,
     -- created_at: Uppfyller FR-2.2 genom att automatiskt sätta tidsstämpeln när raden skapas
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     -- Validering: Säkerställer att sluttiden inte kan vara tidigare än starttiden
