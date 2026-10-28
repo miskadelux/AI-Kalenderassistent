@@ -26,3 +26,12 @@ DB_NAME=ai_kalender
 OLLAMA_HOST="web_path_to_localhost_with:port_number"
 OLLAMA_MODEL="llama3:latest"
 ```
+
+# Lokala AI-modeller (OLLAMA)
+
+1. se till att ollama är installerad och körs i bakgrunden.
+2. hämta dedn modell som krävs
+   - genom att göra `ollama pull {namn_på_önskad_modell}`
+
+3. Testa anslutningen och felhanteringen genom att göra test-skriptet
+   - `python python/test/test_ollama.py`

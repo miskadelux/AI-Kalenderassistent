@@ -37,7 +37,7 @@ def test_ollama_connection():
     except Exception as e:
         print(
             f"\n [FEL] Ollama svarade inte på {ollama_host}, är tjänsten igång?")
-        print("Teknikst felmeddelande {e}")
+        print(f"Teknikst felmeddelande {e}")
         sys.exit(1)
 
 
