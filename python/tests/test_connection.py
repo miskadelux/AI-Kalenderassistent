@@ -1,4 +1,5 @@
 import os
+
 import pymysql
 from dotenv import load_dotenv
 
@@ -25,7 +26,7 @@ try:
     with connection.cursor() as cursor:
         cursor.execute("SELECT 1 AS test_val;")
         result = cursor.fetchone()
-        print(f"Koplingen lyckades! Testfrågan gav SVAR: ", result)
+        print("Koplingen lyckades! Testfrågan gav SVAR: ", result)
 
         cursor.execute("SELECT COUNT(*) AS event_count FROM events;")
         count_result = cursor.fetchone()
@@ -33,7 +34,7 @@ try:
         print(f"Antal rader i events-tabellen: {num_events}")
 
 except pymysql.MySQLError as e:
-    print(f"\n[FEL] Kunde inte ansluta till databasen. Konteollera att MySQL är igång och att uppgifterna i .env stämmer.")
+    print("\n[FEL] Kunde inte ansluta till databasen. Konteollera att MySQL är igång och att uppgifterna i .env stämmer.")
     print(SystemError(f"Tekniskt felmedelande: {e}"))
 
 finally:
