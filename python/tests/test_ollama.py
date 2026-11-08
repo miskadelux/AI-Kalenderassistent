@@ -1,8 +1,9 @@
 import os
 import sys
 import time
-from dotenv import load_dotenv
+
 import ollama
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -34,7 +35,7 @@ def test_ollama_connection():
         print(f"Model som svareade: {ollama_model}")
         print(f"Svarstiden: {elapsed_time:.4} sekunder \n")
 
-    except Exception as e:
+    except (ollama.ResponseError, ConnectionError, OSError) as e:
         print(
             f"\n [FEL] Ollama svarade inte på {ollama_host}, är tjänsten igång?")
         print(f"Teknikst felmeddelande {e}")

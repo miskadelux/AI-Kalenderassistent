@@ -4,3 +4,5 @@ python-dotenv
 ollama
 APScheduler
 openpyxl
+requests
+ruff
