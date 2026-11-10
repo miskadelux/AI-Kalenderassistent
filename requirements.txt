@@ -6,3 +6,4 @@ APScheduler
 openpyxl
 requests
 ruff
+pytest
